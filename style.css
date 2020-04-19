@@ -72,6 +72,8 @@ canvas.mapboxgl-canvas {
     margin: 0 auto;
     font-size: 1.2em;
     color: #c4c4c9;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .notification{
