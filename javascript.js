@@ -2,7 +2,7 @@
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic3ZlbnRleSIsImEiOiJjazk1djAzZ2IwMmQ2M2Z0YzlocjFwNGh0In0.9HbUhvs2jWClA1vkLYutzg';
     var map = new mapboxgl.Map({
         style: 'mapbox://styles/mapbox/light-v10',
-        center: [4.768890, 52.498012],
+        center: [4.656162, 52.435437],
         zoom: 17.5,
         pitch: 45,
         bearing: -17.6,
@@ -76,7 +76,7 @@ map.on('load', function() {
                                 'type': 'Feature',
                                 'geometry': {
                                     'type': 'Point',
-                                    'coordinates': [4.768890, 52.498012]
+                                    'coordinates': [4.656162, 52.435437]
                                 }
                             }
                         ]
@@ -94,3 +94,6 @@ map.on('load', function() {
             }
         );
     });
+
+//Nieuwe api komt hierna//
+
