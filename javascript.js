@@ -123,3 +123,15 @@ knop.addEventListener('click',function(name){
     .catch(err => alert("Stad niet herkend."))
 
 })
+
+knop.addEventListener('click',function(){
+    var pos1 = lat.innerHTML;
+    var pos2 = lon.innerHTML;
+
+    console.log(pos1); 
+
+    map.flyTo({
+        center: [pos2,pos1],
+        essential: true // this animation is considered essential with respect to prefers-reduced-motion
+    });
+});
