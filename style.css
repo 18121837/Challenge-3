@@ -168,6 +168,10 @@ input {
 
 @media (min-width: 1800px) {
     input {
-        width:200px
+        width:200px;
+    }
+    .plekjetekst {
+        font-size:25px;
+        
     }
 }
