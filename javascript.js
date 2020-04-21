@@ -1,8 +1,11 @@
+var lang = 4.656162;
+var lat = 52.435437;
+
 
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic3ZlbnRleSIsImEiOiJjazk1djAzZ2IwMmQ2M2Z0YzlocjFwNGh0In0.9HbUhvs2jWClA1vkLYutzg';
     var map = new mapboxgl.Map({
         style: 'mapbox://styles/mapbox/light-v10',
-        center: [4.656162, 52.435437],
+        center: [lang, lat],
         zoom: 17.5,
         pitch: 45,
         bearing: -17.6,
@@ -63,7 +66,7 @@
     });
 
 map.on('load', function() {
-        map.loadImage( 'https://github.com/18121837/Challenge-3/blob/master/images/marker.png',
+        map.loadImage( 'images/marker.png',
             function(error, image) {
                 if (error) throw error;
                 map.addImage('landing', image);
@@ -112,7 +115,8 @@ knop.addEventListener('click',function(name){
         var temperatuurValue = data['main']['temp'];
         var beschrijvingValue = data['weather'][0]['description'];
         var icoonValue = data['weather'][0]['icon'];
-    
+        //lat = data['latitude'];
+        console.log(lat);
         locatie.innerHTML = locatieValue;
         temperatuur.innerHTML = Math.round(temperatuurValue - 272.15) + " -° C";
         beschrijving.innerHTML = beschrijvingValue;
@@ -124,14 +128,3 @@ knop.addEventListener('click',function(name){
 
 })
 
-knop.addEventListener('click',function(){
-    var pos1 = lat.innerHTML;
-    var pos2 = lon.innerHTML;
-
-    console.log(pos1); 
-
-    map.flyTo({
-        center: [pos2,pos1],
-        essential: true // this animation is considered essential with respect to prefers-reduced-motion
-    });
-});
