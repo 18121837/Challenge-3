@@ -86,7 +86,7 @@ map.on('load', function() {
     });
 
 //Nieuwe api komt hierna//
-var input = document.querySelector(".inputTekst");
+var input = document.querySelector(".plekjetekst");
 var knop = document.querySelector(".knop");
 var temperatuur = document.querySelector(".temperatuur");
 var beschrijving = document.querySelector(".beschrijving");
